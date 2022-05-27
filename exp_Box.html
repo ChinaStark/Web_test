@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+	<style type="text/css">
+		.all{
+			width:1080px;
+			height: 3000px;
+			background-color:yellowgreen;
+			border-style:ridge;
+			margin: 0px auto;
+			position: relative;
+		}
+		
+		#a,#b{
+			width: 150px;
+			height: 50px;
+			background-color: blanchedalmond;
+			
+		}
+		#a{
+			margin-bottom:100px;
+		 	margin-left: 125px;
+			border-bottom-style: ridge;
+			text-align: center;
+			border-radius: 25px;
+			border:5px  solid #4BD261 
+		}
+		#b{
+			margin-left: 5px;
+			margin-right: 125px;
+			margin-top: 0px;
+			float:right;
+			box-shadow: 10px 10px 50px #888888
+		}
+		#c{
+			position: sticky;
+			width : 1080px;
+			height: 68px;
+			z-index: 10;
+			left: 436px;
+			background-color: aquamarine;
+			top: 0px;
+			float: left;
+		}
+		#d{
+			position: absolute;
+			background-color: aquamarine;
+			width : 175px;
+			height: 57px;
+			z-index: 9;
+			
+			left: 407px;
+			top: 240px;
+			z-index: 19;
+			color:rgba(255,9,9,0.78)
+		}
+		#e{
+			position: relative;
+			background-color : aquamarine;
+			width : 175px;
+			height: 57px;
+			z-index: 9;
+			
+			left: 0px;
+			top: 240px;
+			z-index: 19;
+		}
+		#e:hover{
+			color:black;
+			background-color: azure;
+		}
+	</style>
+<body>
+	<div id ="d">ddd</div>
+	<div class="all">
+		
+		<div id ="c">ccc</div>
+		<div id = "a">aaa</div>
+		<div id="b">bbb</div>
+		<div id="e">eee</div>
+	</div>
+	
+
+</body>
+</html>

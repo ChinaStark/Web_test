@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8">
+<title>无标题文档</title>
+	<script  type="text/javascript">
+		var drag = false;
+		var dis = false;
+		function Event(x)
+		{
+			var o = 1;
+			var I = document.getElementById("pos").style.posLeft;
+			var t = document.getElementById("pos").style.posTop;
+			var If = document.getElementById("pos").style.posLeft;
+			var tp = document.getElementById("pos").style.posTop;
+		    switch(x)
+				{
+					case 1:
+						drag = true;
+						if(0 == 1)
+							{
+								I = event.clientX - document.getElementById("pos").style.posLeft;
+								t = event.clientY - document.getElementById("pos").style.posTop;
+							}
+						
+						break;
+					case 2:
+						drag = false;break;
+					case 3:
+						if (drag)
+							{
+								If = event.clientX ;
+								tp = event.clientY ;
+							}break;
+					case 4:
+					dis = !dis;
+						if(dis){
+							document.getElementById("intxt").style.display = "block";
+							drag = false;
+						}else{
+							document.getElementById("intxt").style.display = "none";
+							drag = false;
+						}break;
+						
+					case 5:
+						document.getElementById("pos").style.backgroundColor = "#fafafa";break;
+					case 6:
+						document.getElementById("pos").style.backgroundColor = "#eee";break;
+				}
+			
+			document.getElementById("pos").style.left = If + "px";
+			document.getElementById("pos").style.top = tp + "px";;
+		}
+	</script>
+	<style type="text/css">
+		*{
+			margin:  0px;
+			padding: 0px;
+		}
+		#all{height: 600px;}
+		
+		#pos{
+			width: 140px; height: 20px;
+			
+			background:  #eee;
+			border:   1px solid #333;
+			position: absolute;
+			top:  0px;left:10px;
+		}
+		#intxt{
+			display: none;
+			height: 100px;
+			margin-top : 21px;
+			border: 1px dotted #333;
+			font-size: 12px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id = "all" onMouseMove="Event(3);"  onMouseUp="Event(2);">
+		<div id="pos" onMouseDown="Event(1);" onDblClick="Event(4);" onMouseOver="Event(5);" onMouseOut="Event(6);">
+			<div id="intxt">
+			<h4>标题</h4>
+			<p>文本就在这</p>
+		</div>
+		</div>
+		
+	</div>
+	Y:<input type="text" id = "y1" size="4" value="12">
+	X:<input type="text" id = "x1" size="4"><br>
+	
+</body>
+</html>

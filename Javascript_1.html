@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS</title>
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+		var i = 0;
+		var area = "Mercedes Benz";
+		document.writeln("<p>Dont't forget the start dream, And you will be successful!</p><br/>");
+		document.writeln(area +" AMG");
+		function fun()
+		{
+			
+			var select1 = f1.opt.value;
+			switch(select1)
+			{
+					
+				case "C-class":
+					alert("你的选择是  Mercedes Benz C-class ");
+					f1.val.value = "感谢你的选择你的"+f1.opt.value+"将会在20分钟后送到你的手里！！！" ;
+					break;
+				case "AMG":
+					alert("你的选择是 AMG GT 63");
+					f1.val.value = "感谢你的选择你的"+f1.opt.value+"将会在20分钟后送到你的手里！！！" ;
+					break;
+				case "E级":
+					alert("你的选择是 Mercedes Benz E-couple");
+					f1.val.value = "感谢你的选择你的"+f1.opt.value+"将会在20分钟后送到你的手里！！！" ;
+					break;
+				default:
+					alert("你没有做出选择");
+					break;
+			}
+			i = 1;
+		}
+		
+			
+		
+	</script>
+	<form name="f1">
+		<select name="opt">
+			<option value="C-class">C-class </option>
+			<option value="AMG">AMG</option>
+			<option value="E级">E级</option>
+		</select>
+		
+		
+		
+		<input type="button" value="OK" onClick="fun()">
+		<input type="text" name="val" size="70">
+<!--		<textarea name = "val1" cols="15" rows = "2" ></textarea>-->
+		
+	</form>
+	<button   onClick="window.close()">Close</button>
+	<script type="text/javascript">
+		for(var i = 0;i<5;i++)
+			{
+				document.write("数字"+i+"<br/>");
+			}
+		var arr = ['e','r','y'];
+		var c = arr.shift();
+		document.write(c+"<br/>");
+		document.write(arr);
+		var c1 =  arr.unshift("g");
+		arr.splice(1,1,"s","K");
+		var tome = new Date();
+		
+		document.write(tome.toLocaleTimeString());
+		var e = navigator.appName;
+		document.write(e);
+		function MAS()
+		{
+			var ll = window.opener();
+		}
+	</script>
+	<button onClick="MAS();"> 
+		点击
+	</button>
+</body>
+</html>

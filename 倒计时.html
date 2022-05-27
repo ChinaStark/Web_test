@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>倒计时</title>
+	<script    type="text/javascript">
+		var time = "";
+		var hour = 18006000; 
+
+		
+		function T_2()
+		{
+			hour = hour - 1000;
+			var time1 = new Date(hour);
+			f1.val.value = time1.toLocaleTimeString();
+			
+			//time = time1.toLocaleTimeString();
+			setTimeout("T_2()",1000);
+			
+		}
+		
+	</script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		document.bgColor = "pink";
+		document.fgColor = "red";
+	</script>
+	 <form name="f1">
+		 <a>倒计时</a>
+		<input type="text" name="val" size="20" border="0"><br>
+		<button type="button" onClick="T_2()">Action</button>
+		 
+	</form>
+	<p>hhhhhhhhhhh</p>
+</body>
+</html>

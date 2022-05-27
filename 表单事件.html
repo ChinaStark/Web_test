@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表单事件</title>
+	<script type="text/ecmascript">
+		function f()
+		{
+			alert("选择成功！");
+			var txt = qq.pp.value;
+			document.bgColor = "red";
+			document.getElementById("i").innerHTML = txt;
+		}
+	</script>
+</head>
+
+<body>
+	<form name="qq">
+		<input name="pp"  type="text" value="a"
+		   onChange = "alert('be changed');"
+		   onSelect=  "alert('be select');">
+	</form>
+	<a    onMouseOver="f();">  plaese select:  </a>
+	<form>
+	  <select name="pp">
+			<option onMouseMove ="f();">AJ </option>
+			<option>AD</option>
+		</select>
+		<br>
+		<span id="i" onMouseOver="document.bgcolor = red"></span>
+</form>
+</body>
+</html>

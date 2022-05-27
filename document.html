@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>document</title>
+	<script type="text/javascript">
+		var i = 1;
+		function dom(x)
+		{
+			var myWin;
+			
+			switch(x)
+				{
+					case 1:
+						window.open("exp_1.html","new_window","menubar = no,directories = no,location = no,width = 900,height = 800,top = 5");
+						break;
+					case 2:
+						myWin.document.clear();
+						myWin.document.open();
+						myWin.document.write("this is new text");
+						myWin.document.close();
+						break;
+					case 3:
+						if (i == 1)
+							alert("你想要写点什么");
+						i++;
+						break;
+					case 5:
+						kk.jj.value = "55";
+						break;
+					default:
+						document.bgColor = "black";
+				}
+			
+		}
+		function ll()
+			{
+				kk.jj.value = "gg";
+				alert("KK");
+			}
+	</script>
+	
+<!--
+	<script type="text/javascript">
+		    document.write("hello");
+
+		</script>
+-->
+</head>
+
+<body>
+	<form name = "kk">
+		<button  type="button" name="hh" onClick="kk.jj.value = '5';">open new window</button>
+		<input type="text" name="username"  value="ddd" οnfοcus="dom(3);" οnblur="if (this.value == '') {this.value = '请输入用户名';}"/>
+		<input  type="text" name="jj" onfocus="dom(3)" onBlur="dom(5);" size="5"/>
+	</form>
+	
+
+</body>
+</html>
